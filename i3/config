@@ -198,6 +198,9 @@ new_window pixel 0
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
+# 设置显示器
+#exec --no-startup-id xrandr --output DP-1 --primary --mode 1600x900 --left-of HDMI-2 --auto
+
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id feh --bg-fill --bg-scale ~/.background.jpg
@@ -249,7 +252,7 @@ bar {
 	position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
+	tray_output primary
 #	tray_output eDP1
 
 	bindsym button4 nop
@@ -334,3 +337,4 @@ for_window [title="qqmusic"] floating enable
 for_window [title="Qv2ray"] floating enable
 for_window [title="qq"] floating enable
 for_window [title="QQ"] floating enable
+
